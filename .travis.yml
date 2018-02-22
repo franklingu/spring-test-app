@@ -2,7 +2,8 @@ language: java
 services:
   - postgresql
 before_script:
-  - psql -c 'create user find_driver_dba with password 'password'; create database find_driver_db with owner find_driver_dba;' -U postgres
+  - psql -c 'create user find_driver_dba;' -U postgres
+  - psql -c 'create database find_driver_db with owner find_driver_dba;' -U postgres
 jdk:
   - oraclejdk8
 install:
